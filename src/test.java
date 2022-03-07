@@ -2,24 +2,6 @@
 public class test {
 
 	public static void main(String[] args) throws Exception{
-		//search test
-		int[] arraya= {};//empty set
-		int[] arrayb= {1};//one number
-		int[] arrayc= {1,2,3};//odd amount of numbers
-		int[] arrayd= {1,2,3,4};//even amount of numbers
-		
-		
-		System.out.println("Linear search test");
-		try {
-			if(SortingEngine.linearSearch(-1, arraya)==-1)
-				System.out.println("Passed empty set and number not in array test.");
-			else
-				System.out.println("Error exist with working on empty set or number not in array");
-		}catch(Exception E){
-			System.out.println("Error exist with working on empty set or number not in array");
-		}
-		System.out.println();
-		
 		
 		//sorting test
 		int[] array0= {2,1,2,3,3}; //repeating numbers & odd amount of numbers
@@ -335,10 +317,95 @@ public class test {
 				System.out.println("Merge sort test passed.");
 		
 		System.out.println();
-		SortingEngine.shuffle(array0);
-		SortingEngine.shuffle(array1);
-		SortingEngine.shuffle(array2);
-		SortingEngine.shuffle(array3);
+		
+		
+		
+		
+		//search test
+				int[] arraya= {};//empty set
+				int[] arrayb= {1};//one number
+				int[] arrayc= {1,2,3,3,3};//repeating and odd amount of numbers
+				int[] arrayd= {1,2,3,4};//even amount of numbers
+				
+				
+				System.out.println("Linear search test");
+				try {
+					if(SortingEngine.linearSearch(-1, arraya)==-1)
+						System.out.println("Passed empty set and number not in array test.");
+					else
+						System.out.println("Error exist with working on empty set or number not in array");
+				}catch(Exception E){
+					System.out.println("Error exist with working on empty set or number not in array");
+				}
+				try {
+					if(SortingEngine.linearSearch(1, arrayb)==0)
+						System.out.println("Passed one number test.");
+					else
+						System.out.println("Error exist with working on array with a single number");
+				}catch(Exception E){
+					System.out.println("Error exist with working on array with a single number");
+				}
+				try {
+					if(SortingEngine.linearSearch(3, arrayc)==2)
+						System.out.println("Passed repeating and odd amount of numbers test.");
+					else
+						System.out.println("Error exist with working on array with repeating or odd amount of numbers");
+				}catch(Exception E){
+					System.out.println("Error exist with working on array with repeating or odd amount of numbers");
+				}
+				try {
+					if(SortingEngine.linearSearch(4, arrayd)==3)
+						System.out.println("Passed even amount of numbers test.");
+					else
+						System.out.println("Error exist with working on array with even amount of numbers");
+				}catch(Exception E){
+					System.out.println("Error exist with working on array with even amount of numbers");
+				}
+				System.out.println("Passed linear search test.");
+				System.out.println();
+				
+				
+				
+				
+				
+				
+				System.out.println("Binary search test");
+				try {
+					if(SortingEngine.binarySearch(-1, arraya)==-1)
+						System.out.println("Passed empty set and number not in array test.");
+					else
+						System.out.println("Error exist with working on empty set or number not in array");
+				}catch(Exception E){
+					System.out.println("Error exist with working on empty set or number not in array");
+				}
+				try {
+					if(SortingEngine.binarySearch(1, arrayb)==0)
+						System.out.println("Passed one number test.");
+					else
+						System.out.println("Error exist with working on array with a single number");
+				}catch(Exception E){
+					System.out.println("Error exist with working on array with a single number");
+				}
+				try {
+					if(SortingEngine.binarySearch(3, arrayc)==2)
+						System.out.println("Passed repeating and odd amount of numbers test.");
+					else
+						System.out.println("Error exist with working on array with repeating or odd amount of numbers");
+				}catch(Exception E){
+					System.out.println("Error exist with working on array with repeating or odd amount of numbers");
+				}
+				try {
+					if(SortingEngine.binarySearch(4, arrayd)==3)
+						System.out.println("Passed even amount of numbers test.");
+					else
+						System.out.println("Error exist with working on array with even amount of numbers");
+				}catch(Exception E){
+					System.out.println("Error exist with working on array with even amount of numbers");
+				}
+				System.out.println("Passed binary search test.");
+				System.out.println();
+				
+				
 		
 
 	}

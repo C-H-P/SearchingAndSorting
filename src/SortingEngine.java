@@ -60,6 +60,8 @@ public class SortingEngine {
 	}
 	
 	public static int binarySearch(int number,int[] array) {
+		if(array.length<1)
+			return -1;
 		int lowerbound=0,res=-1;
 		int upperbound=array.length-1;
 		
@@ -132,7 +134,7 @@ public class SortingEngine {
 	}
 	
 	public static void insertionSort(int[]array) {
-		int current=-1,temp;
+		int current=-1;
 		for(int x=1;x<array.length;x++) {
 			if(array[x]<array[x-1]) {
 				current=x;
